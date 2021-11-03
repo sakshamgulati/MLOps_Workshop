@@ -11,7 +11,7 @@ stages:
   jobs:
   - job: "Provision_Dev"
     displayName: "Provision Dev resources"
-    pool: mlops-demo-agent01
+    pool: mlops-demo
     timeoutInMinutes: 0
     steps:
     - task: AzureResourceGroupDeployment@2
