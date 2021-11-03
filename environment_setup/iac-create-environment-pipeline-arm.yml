@@ -4,7 +4,6 @@ trigger: none
 variables:
 - group: mlops-wsh-sg
 
-pool: mlops-demo-agent01
 
 stages:
 - stage: 'Dev'
@@ -12,8 +11,7 @@ stages:
   jobs:
   - job: "Provision_Dev"
     displayName: "Provision Dev resources"
-    pool:
-      vmImage: 'ubuntu-latest'
+    pool: mlops-demo-agent01
     timeoutInMinutes: 0
     steps:
     - task: AzureResourceGroupDeployment@2
